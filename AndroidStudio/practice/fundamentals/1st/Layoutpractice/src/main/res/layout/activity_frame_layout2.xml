@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- TODO: この LinearLayout の子 View が、横方向の真ん中に来るようにする -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,24 +13,70 @@
     tools:context=".MainActivity">
 
     <FrameLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <!-- TODO: この TextView の下に ic_launcher の画像を表示する ImageView を配置し、センタリングする -->
         <!-- TODO: TextView は 縦方向の真ん中に来るようにする -->
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_frame_image" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="@string/hello_world" />
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <!-- TODO: この ImageView の上に来る、同じ画像を表示する ImageView を 4 つ配置する -->
         <!-- TODO: それぞれ、5 dp ずつ右と下にずれていくようにする -->
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_frame_image" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="5"
+            android:paddingTop="5"
+            android:src="@drawable/ic_frame_image" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="10"
+            android:paddingTop="10"
+            android:src="@drawable/ic_frame_image" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="15"
+            android:paddingTop="15"
+            android:src="@drawable/ic_frame_image" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="20"
+            android:paddingTop="20"
             android:src="@drawable/ic_frame_image" />
     </FrameLayout>
 
@@ -38,9 +85,27 @@
         android:layout_height="wrap_content">
         <!-- この ImageView の下に、android:background="@drawable/shape"を持つ FrameLayout を配置し、左と上に 20 dp ずつ余白をつける -->
         <!-- 配置した FrameLayout の内側に、20 dp の余白を付け、その子要素に、hogehogeと表示する TextView を配置する -->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20"
+            android:layout_marginTop="20"
+            android:background="@drawable/shape">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20"
+                android:text="hogehoge" />
+        </FrameLayout>
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_frame_image" />
+
     </FrameLayout>
+
 </LinearLayout>
