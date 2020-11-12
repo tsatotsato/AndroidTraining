@@ -10,10 +10,16 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
+        </activity>
+
+        <activity android:name=".MainActivityNew">
             <intent-filter>
+                <!--> 初回起動アクティビティの指定とランチャーからの起動を許可 <-->
+                <!--> 複数のアクティビティに指定がある場合は上に記述されているほうが優先される <-->
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
