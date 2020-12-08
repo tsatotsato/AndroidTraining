@@ -17,9 +17,62 @@ import android.widget.Toast;
  */
 public class Controller1Activity extends AppCompatActivity {
 
+    /*Activity起動時に実行*/
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_controller1);
+
+        String methodName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Toast toast = Toast.makeText(this, "1." + methodName, Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
+    /*Activityの画面が見える状態*/
+    @Override
+    protected void onStart() {
+        super.onStart();
+        String methodName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Toast.makeText(this, "2." + methodName, Toast.LENGTH_SHORT).show();
+    }
+
+    /*Activityの画面が操作可能な状態*/
+    @Override
+    protected void onResume() {
+        super.onResume();
+        String methodName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Toast.makeText(this, "3." + methodName, Toast.LENGTH_SHORT).show();
+    }
+
+    /*Activityから離れる直前*/
+    @Override
+    protected void onPause() {
+        super.onPause();
+        String methodName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Toast.makeText(this, "4." + methodName, Toast.LENGTH_SHORT).show();
+    }
+
+    /*Activityが見えなくなった状態*/
+    @Override
+    protected void onStop() {
+        super.onStop();
+        String methodName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Toast.makeText(this, "5." + methodName, Toast.LENGTH_SHORT).show();
+    }
+
+    /*onStop onStartの間*/
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        String methodName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Toast.makeText(this, "6." + methodName, Toast.LENGTH_SHORT).show();
+    }
+
+    /*Activityが破棄される直前*/
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        String methodName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Toast.makeText(this, "6." + methodName, Toast.LENGTH_SHORT).show();
     }
 }
