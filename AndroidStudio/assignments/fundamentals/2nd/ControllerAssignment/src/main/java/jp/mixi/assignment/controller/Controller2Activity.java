@@ -23,6 +23,11 @@ public class Controller2Activity extends AppCompatActivity implements TextWatche
         // Hint: 状態遷移が何も起こっていない場合は、savedInstanceState は null です
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_controller2);
+
+        if (savedInstanceState != null) {
+            TextView text = (TextView) findViewById(R.id.SyncedText);
+            text.setText(savedInstanceState.getString("key"));
+        }
     }
 
     @Override
@@ -38,6 +43,9 @@ public class Controller2Activity extends AppCompatActivity implements TextWatche
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
+
+        TextView text = (TextView) findViewById(R.id.SyncedText);
+        text.setText(savedInstanceState.getString("key"));
     }
 
     /**
@@ -46,6 +54,9 @@ public class Controller2Activity extends AppCompatActivity implements TextWatche
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+
+        TextView text = (TextView) findViewById(R.id.SyncedText);
+        outState.putString("key", text.getText().toString());
     }
 
     @Override
