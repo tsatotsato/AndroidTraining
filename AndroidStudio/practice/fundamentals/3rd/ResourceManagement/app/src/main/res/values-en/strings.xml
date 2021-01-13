@@ -13,10 +13,10 @@
     <string name="confirm_button">Show Toast</string>
     <string name="toast_message">%1$s は、%2$d 回ボタンを押しました</string>
 
-    <string name="str1">あいうえお</string>
-    <string name="str2">かきくけこ</string>
-    <string name="str3">さしすせそ</string>
-    <string name="str4">たちつてと</string>
-    <string name="str5">なにぬねの</string>
+    <string name="str1">A I U E O</string>
+    <string name="str2">KA KI KU KE KO</string>
+    <string name="str3">SA SI SU SE HO</string>
+    <string name="str4">TA TI TU TE TO</string>
+    <string name="str5">NA NI NU NE NO</string>
 
 </resources>
